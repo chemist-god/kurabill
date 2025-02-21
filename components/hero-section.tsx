@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import WorldMap from '../components/world-map';
 import { MountainGradient } from './mountain-gradient';
+import JoinWaitlistModal from './JoinWaitlistModal';
+import { useState } from 'react';
 
 
 const medicationBubbles = [
@@ -70,7 +72,9 @@ const countryProfiles = [
   }
 ]
 
-function HeroSection() {
+const HeroSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen bg-[#F5F9F7] overflow-hidden">
       {/* Hero Content */}
@@ -101,6 +105,7 @@ function HeroSection() {
           for your loved ones abroad using stable coin payments.
         </motion.p>
         <motion.button
+          onClick={() => setIsModalOpen(true)}
           className="bg-green-700 text-white px-8 py-3 rounded-full text-lg hover:bg-green-800 transition-colors"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -109,6 +114,9 @@ function HeroSection() {
           Join Waitlist
         </motion.button>
       </div>
+
+      {/* Modal */}
+      <JoinWaitlistModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
       {/* Map Section */}
       <div className="relative mt-16">

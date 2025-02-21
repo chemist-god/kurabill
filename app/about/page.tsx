@@ -1,11 +1,11 @@
-import React from 'react'
+import AboutHero from '@/components/about-hero';
+import WhyChooseKurabill from '@/components/why-choose-kurabill';
 
-const page = () => {
+export default function AboutPage() {
   return (
-    <div>
-      About Page
-      </div>
-  )
+    <main className="min-h-screen pt-24 px-6">
+      <AboutHero />
+      <WhyChooseKurabill />
+    </main>
+  );
 }
-
-export default page

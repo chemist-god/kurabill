@@ -28,10 +28,10 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">For Patients</h3>
             <ul className="space-y-2">
-              <li><Link href="/our-services">Our Services</Link></li>
+              <li><Link href="/services">Our Services</Link></li>
               <li><Link href="/testimonials">Testimonials</Link></li>
               <li><Link href="/faqs">FAQs</Link></li>
-              <li><Link href="/about-us">About Us</Link></li>
+              <li><Link href="/about">About Us</Link></li>
             </ul>
           </div>
 
@@ -41,7 +41,7 @@ export function Footer() {
               <li><Link href="/pricing">Pricing</Link></li>
               <li><Link href="/testimonials">Testimonials</Link></li>
               <li><Link href="/faqs">FAQs</Link></li>
-              <li><Link href="/about-us">About Us</Link></li>
+              <li><Link href="/about">About Us</Link></li>
             </ul>
           </div>
 
@@ -50,7 +50,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li><Link href="/privacy-policy">Privacy Policy</Link></li>
               <li><Link href="/terms">Terms & Condition</Link></li>
-              <li><Link href="/about-us">About Us</Link></li>
+              <li><Link href="/about">About Us</Link></li>
             </ul>
           </div>
 

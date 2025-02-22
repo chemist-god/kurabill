@@ -44,7 +44,7 @@ export function TestimonialsSection() {
         {/* Subtitle */}
         <div className="flex justify-center mb-12">
           <span className="inline-block px-6 py-2 rounded-full bg-gray-100 text-gray-800">
-            Don't Just Take Our Word for It
+            Don&apos;t Just Take Our Word for It
           </span>
         </div>
 

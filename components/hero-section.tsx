@@ -128,7 +128,7 @@ const HeroSection = () => {
             <motion.div
               key={bubble.id}
               className="absolute bg-white rounded-lg px-4 py-2 shadow-lg flex items-center gap-2 cursor-default hover:shadow-xl transition-shadow duration-300"
-              style={bubble.position as any}
+              style={bubble.position as React.CSSProperties}
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               whileHover={{ scale: 1.05 }}
@@ -144,7 +144,7 @@ const HeroSection = () => {
             <motion.div
               key={profile.id}
               className="absolute"
-              style={profile.position as any}
+              style={profile.position as React.CSSProperties}
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               whileHover={{ scale: 1.1 }}

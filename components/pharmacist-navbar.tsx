@@ -1,11 +1,8 @@
 "use client"
 import Link from 'next/link'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
-import { useState } from 'react'
 
 export default function PharmacistNavbar() {
-  const router = useRouter()
   
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#1B4332]/90 backdrop-blur-sm">

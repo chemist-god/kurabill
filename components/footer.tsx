@@ -1,10 +1,10 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import logo from '@/public/assets/kurabill-logo-I.png'
-import facebook from '@/public/assets/facebook.png'
-import twitter from '@/public/assets/twitter.png'
-import youtube from '@/public/assets/youtube.png'
-import instagram from '@/public/assets/instagram.png'
+import Link from 'next/link';
+import Image from 'next/image';
+import logo from '@/public/assets/kurabill-logo-I.png';
+import facebook from '@/public/assets/facebook.png';
+import twitter from '@/public/assets/twitter.png';
+import youtube from '@/public/assets/youtube.png';
+import instagram from '@/public/assets/instagram.png';
 
 export function Footer() {
   return (
@@ -13,7 +13,7 @@ export function Footer() {
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-16">
           {/* Logo Section */}
-          <div className="md:col-span-1">
+          <div className="md:col-span-1 flex justify-center md:justify-start">
             <Link href="/">
               <Image 
                 src={logo} 
@@ -28,70 +28,62 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">For Patients</h3>
             <ul className="space-y-2">
-              <li><Link href="/services">Our Services</Link></li>
-              <li><Link href="/testimonials">Testimonials</Link></li>
-              <li><Link href="/faqs">FAQs</Link></li>
-              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/services" className="hover:underline">Our Services</Link></li>
+              <li><Link href="/testimonials" className="hover:underline">Testimonials</Link></li>
+              <li><Link href="/faqs" className="hover:underline">FAQs</Link></li>
+              <li><Link href="/about" className="hover:underline">About Us</Link></li>
             </ul>
           </div>
 
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">For Pharmacists</h3>
             <ul className="space-y-2">
-              <li><Link href="/pricing">Pricing</Link></li>
-              <li><Link href="/testimonials">Testimonials</Link></li>
-              <li><Link href="/faqs">FAQs</Link></li>
-              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/pricing" className="hover:underline">Pricing</Link></li>
+              <li><Link href="/testimonials" className="hover:underline">Testimonials</Link></li>
+              <li><Link href="/faqs" className="hover:underline">FAQs</Link></li>
+              <li><Link href="/about" className="hover:underline">About Us</Link></li>
             </ul>
           </div>
 
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Company</h3>
             <ul className="space-y-2">
-              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link href="/terms">Terms & Condition</Link></li>
-              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/privacy-policy" className="hover:underline">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:underline">Terms & Condition</Link></li>
+              <li><Link href="/about" className="hover:underline">About Us</Link></li>
             </ul>
           </div>
 
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Contact</h3>
             <ul className="space-y-2">
-              <Link
-              href="tel:+23300903390"
-              >
-                +234 009 033 90
-                </Link>
-              <li>+233 049 994 040</li>
-              <Link 
-                href="mailto:kurabill@gmail.com"
-              >
-                Kurabill@gmail.com
-              </Link>
+              <li><Link href="tel:+23300903390" className="hover:underline">+234 009 033 90</Link></li>
+              <li><Link href="tel:+233049994040" className="hover:underline">+233 049 994 040</Link></li>
+              <li><Link href="mailto:kurabill@gmail.com" className="hover:underline">Kurabill@gmail.com</Link></li>
             </ul>
           </div>
         </div>
 
         {/* Social Links & Join Waitlist */}
         <div className="flex justify-between items-center flex-col md:flex-row gap-8">
-            <div className="flex gap-4">
-              <Link href="#">
-                <Image src={facebook} alt="Facebook" width={32} height={32} />
-              </Link>
-              <Link href="#">
-                <Image src={twitter} alt="Twitter" width={32} height={32} />
-              </Link>
-              <Link href="#">
-                <Image src={youtube} alt="YouTube" width={32} height={32} />
-              </Link>
-              <Link href="#">
-                <Image src={instagram} alt="Instagram" width={32} height={32} />
-              </Link>
-            </div>
+          <div className="flex gap-4">
+            <Link href="#" className="hover:opacity-80">
+              <Image src={facebook} alt="Facebook" width={32} height={32} />
+            </Link>
+            <Link href="#" className="hover:opacity-80">
+              <Image src={twitter} alt="Twitter" width={32} height={32} />
+            </Link>
+            <Link href="#" className="hover:opacity-80">
+              <Image src={youtube} alt="YouTube" width={32} height={32} />
+            </Link>
+            <Link href="#" className="hover:opacity-80">
+              <Image src={instagram} alt="Instagram" width={32} height={32} />
+            </Link>
+          </div>
 
           <Link 
             href="/waitlist" 
-            className="bg-white text-[#1B4332] px-8 py-3 rounded-full font-medium"
+            className="bg-white text-[#1B4332] px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors"
           >
             Join Waitlist
           </Link>
@@ -102,17 +94,17 @@ export function Footer() {
           <div className="flex justify-between items-center flex-wrap gap-4">
             <p> &copy; {new Date().getFullYear()} Kurabill. All Rights Reserved</p>
             <div className="flex gap-8">
-              <Link href="/privacy">Privacy Policy</Link>
-              <Link href="/terms">Terms of Use</Link>
-              <Link href="/refunds">Sales and Refunds</Link>
-              <Link href="/legal">Legal</Link>
-              <Link href="/sitemap">Site Map</Link>
+              <Link href="/privacy" className="hover:underline">Privacy Policy</Link>
+              <Link href="/terms" className="hover:underline">Terms of Use</Link>
+              <Link href="/refunds" className="hover:underline">Sales and Refunds</Link>
+              <Link href="/legal" className="hover:underline">Legal</Link>
+              <Link href="/sitemap" className="hover:underline">Site Map</Link>
             </div>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
 export default Footer;

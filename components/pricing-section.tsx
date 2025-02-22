@@ -61,13 +61,13 @@ const PricingSection: React.FC = () => {
                 {/* Header */}
                 <div className="text-center mb-12">
                     <div className="inline-block px-4 py-1 rounded-full bg-gray-100 mb-4">
-                        <span className="text-sm font-medium">💰 Pricing</span>
+                        <span className="text-sm font-medium">&#39;💰 Pricing&#39;</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold mb-4">
                         Find the right plan
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        Invest in your Business's future with our comprehensive pharmacy solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals.
+                        Invest in your Business&apos;s future with our comprehensive pharmacy solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals.
                     </p>
                 </div>
 

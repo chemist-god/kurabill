@@ -1,31 +1,49 @@
-import React from "react";
-import Image from "next/image";
+"use client"
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const HeroSection = () => {
-  return (
-    <div className="relative bg-gradient-to-r from-green-900 to-gray-900 h-screen flex items-center justify-center text-center px-4">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-      <Image 
-  src="/assets/pharmacies/dashboard.png" 
-  alt="KuraBill Dashboard" 
-  width={1280}  
-  height={523}  
-  priority  
-/>
-      </div>
-      
-      {/* Content */}
-      <div className="relative z-10">
-        <h1 className="text-white text-4xl md:text-5xl font-bold mb-6">
-          Helping You Make More Revenue
-        </h1>
-        <button className="bg-white text-gray-900 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition">
-          Join Waitlist
-        </button>
-      </div>
-    </div>
-  );
+const HelpingSection: React.FC = () => {
+    return (
+        <section className="relative py-16 px-4 md:px-6">
+            {/* Background Image */}
+            <div className="absolute inset-0 hover:bg-gray-200 cursor-pointer">
+                <Link href="/waitlist">
+                <Image
+                    src="/assets/pharmacies/rectangle-design.png" // Your full background image
+                    alt="Background Design"
+                    layout="fill"
+                    objectFit="cover"
+                    className="opacity-100"
+                />
+                </Link>
+            </div>
+            <div className="max-w-7xl mx-auto text-center relative z-10">
+                <motion.h1
+                    className="text-4xl md:text-5xl font-bold text-white mb-4"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                > 
+                </motion.h1>
+                <motion.p
+                    className="text-lg md:text-xl text-white mb-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                    Discover how KuraBill can streamline your pharmacy operations and boost your revenue.
+                </motion.p>
+                    <motion.button
+                        className="cursor-pointer"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
+                    </motion.button>
+            </div>
+        </section>
+    );
 };
 
-export default HeroSection;
+export default HelpingSection;

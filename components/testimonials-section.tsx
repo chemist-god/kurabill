@@ -1,9 +1,9 @@
-  "use client"
-import Image from 'next/image'
-import { useState } from 'react'
+"use client"
+import Image from 'next/image';
+import { useState } from 'react';
 
 export function TestimonialsSection() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
   
   const testimonials = [
     {
@@ -14,7 +14,6 @@ export function TestimonialsSection() {
       date: "13 May 14 2024",
       borderColor: "border-emerald-500"
     },
-    
     {
       name: "Stella James",
       image: "/assets/images/stella.png",
@@ -31,15 +30,13 @@ export function TestimonialsSection() {
       date: "13 May 14 2024",
       borderColor: "border-emerald-500"
     },
-  ]
+  ];
 
   return (
     <section className="w-full py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Section Title */}
-        <h2 className="text-4xl font-bold text-center mb-4">
-          Testimonials
-        </h2>
+        <h2 className="text-4xl font-bold text-center mb-4">Testimonials</h2>
         
         {/* Subtitle */}
         <div className="flex justify-center mb-12">
@@ -50,20 +47,20 @@ export function TestimonialsSection() {
 
         {/* Main Heading */}
         <h3 className="text-3xl md:text-4xl font-bold text-center mb-16">
-          Hear From other Customers Who Use Kurabill
+          Hear From Other Customers Who Use Kurabill
         </h3>
 
         {/* Testimonials Slider */}
         <div className="relative">
           <div className="flex overflow-hidden">
-            <div className="flex transition-transform duration-500 ease-in-out"
+            <div className="flex transition-transform duration-700 ease-in-out"
                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
               {testimonials.map((testimonial, index) => (
                 <div 
                   key={index}
-                  className={`flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4`}
+                  className={`flex-shrink-0 w-full sm:w-3/4 md:w-1/2 lg:w-1/3 p-4`}
                 >
-                  <div className={`p-6 rounded-2xl border-2 ${testimonial.borderColor} h-full`}>
+                  <div className={`p-6 rounded-2xl border-2 ${testimonial.borderColor} h-full shadow-lg transition-transform duration-300 hover:scale-105`}>
                     {/* User Info */}
                     <div className="flex items-center mb-4">
                       <Image
@@ -74,7 +71,7 @@ export function TestimonialsSection() {
                         className="rounded-full"
                       />
                       <div className="ml-4">
-                        <h4 className="font-semibold">{testimonial.name}</h4>
+                        <h4 className="font-semibold text-base md:text-lg">{testimonial.name}</h4>
                         <div className="flex">
                           {[...Array(5)].map((_, i) => (
                             <svg
@@ -91,10 +88,10 @@ export function TestimonialsSection() {
                     </div>
 
                     {/* Testimonial Text */}
-                    <p className="text-gray-600 mb-4">{testimonial.text}</p>
+                    <p className="text-gray-600 mb-4 text-sm md:text-base">{testimonial.text}</p>
 
                     {/* Date */}
-                    <span className="text-sm text-gray-500">{testimonial.date}</span>
+                    <span className="text-xs md:text-sm text-gray-500">{testimonial.date}</span>
                   </div>
                 </div>
               ))}
@@ -103,7 +100,7 @@ export function TestimonialsSection() {
 
           {/* Navigation Buttons */}
           <button
-            className="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg"
+            className="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-200 transition-colors"
             onClick={() => setCurrentSlide(Math.max(0, currentSlide - 1))}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,7 +108,7 @@ export function TestimonialsSection() {
             </svg>
           </button>
           <button
-            className="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg"
+            className="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-200 transition-colors"
             onClick={() => setCurrentSlide(Math.min(testimonials.length - 1, currentSlide + 1))}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -121,5 +118,5 @@ export function TestimonialsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

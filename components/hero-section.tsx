@@ -12,25 +12,25 @@ const medicationBubbles = [
     id: 1,
     type: 'Tooth Ache',
     icon: '🦷',
-    position: { top: '20%', left: '30%' }
+    position: { top: '8%', left: '40%' }
   },
   {
     id: 2,
     type: 'Antibiotics',
     icon: '❤️',
-    position: { top: '25%', left: '15%' }
+    position: { top: '25%', left: '25%' }
   },
   {
     id: 3,
     type: 'Pain Management',
     icon: '💊',
-    position: { top: '40%', right: '35%' }
+    position: { top: '28%', right: '30%' }
   },
   {
     id: 4,
     type: 'Syrups',
     icon: '💉',
-    position: { bottom: '35%', left: '45%' }
+    position: { bottom: '30%', left: '45%' }
   }
 ]
 
@@ -40,28 +40,28 @@ const countryProfiles = [
     country: 'USA',
     flag: '/assets/flags/usa.png',    
     image: '/assets/images/usa.png',   
-    position: { top: '30%', left: '20%' }
+    position: { top: '5%', left: '20%' }
   },
   {
     id: 2,
     country: 'Ghana',
     flag: '/assets/flags/gh.png',
     image: '/assets/images/gh.png',
-    position: { top: '60%', left: '25%' }
+    position: { top: '55%', left: '30%' }
   },
   {
     id: 3,
     country: 'Canada',
     flag: '/assets/flags/canada.png',
     image: '/assets/images/canada.png',
-    position: { top: '40%', left: '45%' }
+    position: { top: '36%', left: '45%' }
   },
   {
     id: 4,
     country: 'Nigeria',
     flag: '/assets/flags/nigeria.png',
     image: '/assets/images/nigeria.png',
-    position: { top: '35%', right: '30%' }
+    position: { top: '-4.5%', right: '32%' }
   },
   {
     id: 5,
@@ -134,7 +134,9 @@ const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.5, delay: bubble.id * 0.1 }}
             >
+              <div className="bg-gray-100 rounded-full p-0.5">
               <span>{bubble.icon}</span>
+              </div>
               <span>{bubble.type}</span>
             </motion.div>
           ))}
@@ -154,15 +156,15 @@ const HeroSection = () => {
                 <Image
                   src={profile.image}
                   alt={profile.country}
-                  width={60}
-                  height={60}
+                  width={80}
+                  height={80}
                   className="rounded-full border-2 border-white "
                 />
                 <Image
                   src={profile.flag}
                   alt={`${profile.country} flag`}
-                  width={24}
-                  height={24}
+                  width={40}
+                  height={40}
                   className="absolute -top-2 -right-2"
                 />
               </div>
@@ -172,9 +174,9 @@ const HeroSection = () => {
           {/* Coin Animations */}
           {/* First Coin */}
           <motion.div
-            className="absolute z-10 top-[15%] right-[15%]"  // Adjusted position and added z-10
+            className="absolute z-10 top-[7%] right-[12%]"  
             animate={{
-              y: [-20, 0, -20],
+              y: [-10, 0, -10],
               rotate: [0, 360]
             }}
             transition={{
@@ -186,15 +188,15 @@ const HeroSection = () => {
             <Image
               src="/assets/images/coin.png"
               alt="Stable coin"
-              width={40}
-              height={40}
+              width={42}
+              height={42}
               className="w-full h-full object-contain"
             />
           </motion.div>
 
           {/* Second Coin */}
           <motion.div
-            className="absolute z-10 bottom-[35%] left-[15%]"  // Added second coin with different position
+            className="absolute z-10 bottom-[40%] left-[8%]"  
             animate={{
               y: [-20, 0, -20],
               rotate: [0, 360]
@@ -203,14 +205,14 @@ const HeroSection = () => {
               duration: 4,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: 1 // Slight delay for visual interest
+              delay: 1 
             }}
           >
             <Image
               src="/assets/images/coin.png"
               alt="Stable coin"
-              width={70}  // Slightly larger
-              height={70}
+              width={78}  // Slightly larger
+              height={78}
               className="w-full h-full object-contain"
             />
           </motion.div>

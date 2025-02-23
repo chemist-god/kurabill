@@ -38,7 +38,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">For Pharmacists</h3>
             <ul className="space-y-2">
-              <li><Link href="/pricing" className="hover:underline">Pricing</Link></li>
+              <li><Link href="/pharmacists/pricing" className="hover:underline">Pricing</Link></li>
               <li><Link href="/testimonials" className="hover:underline">Testimonials</Link></li>
               <li><Link href="/faqs" className="hover:underline">FAQs</Link></li>
               <li><Link href="/about" className="hover:underline">About Us</Link></li>

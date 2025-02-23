@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "KuraBill - Send Care Across Borders",
-  description: "Bridge the distance and show you care by quickly and securely purchasing medications for your loved ones abroad using stable coin payments.",
+  description: "Quickly and securely purchase medications for loved ones abroad using stable coin payments.",
 };
 
 export default function RootLayout({

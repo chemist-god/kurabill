@@ -11,7 +11,7 @@ export function TestimonialsSection() {
       image: "/assets/images/stella.png",
       rating: 4,
       text: "Kurabill has made managing my prescriptions and finding trusted pharmacies a breeze. The convenience it brings to healthcare is unmatched!",
-      date: "13 May 14 2024",
+      date: "January 2025",
       borderColor: "border-emerald-500"
     },
     {
@@ -19,24 +19,32 @@ export function TestimonialsSection() {
       image: "/assets/images/stella.png",
       rating: 5,
       text: "Thanks to Kurabill, I can swiftly and securely make payments for medications from anywhere globally using stablecoins. It's fast, easy, and reliable!",
-      date: "13 May 14 2024",
-      borderColor: "border-emerald-500"
+      date: "January 2025",
+      borderColor: "border-blue-400"
     },
     {
       name: "Stella James",
       image: "/assets/images/stella.png",
       rating: 4,
       text: "Kurabill simplifies the process of sending essential medications to loved ones, no matter where they are. With just a few clicks and secure payments.",
-      date: "13 May 14 2024",
-      borderColor: "border-emerald-500"
+      date: "January 2025",
+      borderColor: "border-purple-500"
     },
   ];
 
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
   return (
     <section className="w-full py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
         {/* Section Title */}
-        <h2 className="text-4xl font-bold text-center mb-4">Testimonials</h2>
+        <h2 className="text-4xl font-bold mb-4">Testimonials</h2>
         
         {/* Subtitle */}
         <div className="flex justify-center mb-12">
@@ -45,75 +53,49 @@ export function TestimonialsSection() {
           </span>
         </div>
 
-        {/* Main Heading */}
-        <h3 className="text-3xl md:text-4xl font-bold text-center mb-16">
-          Hear From Other Customers Who Use Kurabill
-        </h3>
-
-        {/* Testimonials Slider */}
-        <div className="relative">
-          <div className="flex overflow-hidden">
-            <div className="flex transition-transform duration-700 ease-in-out"
-                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-              {testimonials.map((testimonial, index) => (
-                <div 
-                  key={index}
-                  className={`flex-shrink-0 w-full sm:w-3/4 md:w-1/2 lg:w-1/3 p-4`}
-                >
-                  <div className={`p-6 rounded-2xl border-2 ${testimonial.borderColor} h-full shadow-lg transition-transform duration-300 hover:scale-105`}>
-                    {/* User Info */}
-                    <div className="flex items-center mb-4">
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        width={48}
-                        height={48}
-                        className="rounded-full"
-                      />
-                      <div className="ml-4">
-                        <h4 className="font-semibold text-base md:text-lg">{testimonial.name}</h4>
-                        <div className="flex">
-                          {[...Array(5)].map((_, i) => (
-                            <svg
-                              key={i}
-                              className={`w-4 h-4 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`}
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                            >
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Testimonial Text */}
-                    <p className="text-gray-600 mb-4 text-sm md:text-base">{testimonial.text}</p>
-
-                    {/* Date */}
-                    <span className="text-xs md:text-sm text-gray-500">{testimonial.date}</span>
-                  </div>
-                </div>
-              ))}
+        {/* Testimonial Display */}
+        <div className={`p-6 rounded-2xl border-2 ${testimonials[currentSlide].borderColor} mx-auto shadow-lg`}>
+          <div className="flex items-center mb-4">
+            <Image
+              src={testimonials[currentSlide].image}
+              alt={testimonials[currentSlide].name}
+              width={48}
+              height={48}
+              className="rounded-full"
+            />
+            <div className="ml-4">
+              <h4 className="font-semibold">{testimonials[currentSlide].name}</h4>
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <svg
+                    key={i}
+                    className={`w-4 h-4 ${i < testimonials[currentSlide].rating ? 'text-yellow-400' : 'text-gray-300'}`}
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
             </div>
           </div>
+          <p className="text-gray-600 mb-4">{testimonials[currentSlide].text}</p>
+          <span className="text-sm text-gray-500">{testimonials[currentSlide].date}</span>
+        </div>
 
-          {/* Navigation Buttons */}
+        {/* Navigation Buttons */}
+        <div className="flex justify-between mt-8">
           <button
-            className="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-200 transition-colors"
-            onClick={() => setCurrentSlide(Math.max(0, currentSlide - 1))}
+            className="bg-gray-200 text-black px-4 py-2 rounded-full hover:bg-gray-300 transition-colors"
+            onClick={handlePrev}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
+            Previous
           </button>
           <button
-            className="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-200 transition-colors"
-            onClick={() => setCurrentSlide(Math.min(testimonials.length - 1, currentSlide + 1))}
+            className="bg-gray-200 text-black px-4 py-2 rounded-full hover:bg-gray-300 transition-colors"
+            onClick={handleNext}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            Next
           </button>
         </div>
       </div>

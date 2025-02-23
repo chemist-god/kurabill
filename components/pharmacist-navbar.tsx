@@ -1,11 +1,10 @@
 "use client"
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function PharmacistNavbar() {
-  
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1B4332]/90 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1B4332]/90 backdrop-blur-md">
       <nav className="max-w-7xl mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -29,6 +28,7 @@ export default function PharmacistNavbar() {
               </Link>
               <button
                 className="px-6 py-2 rounded-full bg-[#44724A] text-white"
+                disabled 
               >
                 For Pharmacists
               </button>
@@ -37,16 +37,16 @@ export default function PharmacistNavbar() {
 
           {/* Right Nav Items */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/pricing" className="text-white hover:text-white/80">
+            <Link href="/pharmacists/pricing" className="text-white hover:text-white/80">
               Pricing
             </Link>
-            <Link href="/testimonials" className="text-white hover:text-white/80">
+            <Link href="/pharmacists/testimonials" className="text-white hover:text-white/80">
               Testimonials
             </Link>
-            <Link href="/faqs" className="text-white hover:text-white/80">
+            <Link href="/pharmacists/faqs" className="text-white hover:text-white/80">
               FAQs
             </Link>
-            <Link href="/about" className="text-white hover:text-white/80">
+            <Link href="/pharmacists/about" className="text-white hover:text-white/80">
               About Us
             </Link>
             <Link
@@ -60,5 +60,5 @@ export default function PharmacistNavbar() {
         </div>
       </nav>
     </header>
-  )
+  );
 }

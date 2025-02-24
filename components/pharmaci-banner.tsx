@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { MobileLogoBanner } from './Logo-Banner/mobile-logo'
 
 export function PharmaciBanner() {
   const logos = [
@@ -20,22 +21,28 @@ export function PharmaciBanner() {
         </h2>
 
         {/* Logos */}
-        <div className="flex items-center justify-center flex-wrap gap-x-16 gap-y-8">
+        <div className="hidden md:flex items-center justify-center flex-nowrap overflow-x-auto gap-x-16 gap-y-8">
           {logos.map((logo) => (
             <div 
               key={logo.alt} 
-              className="relative h-[40px]"
+              className="relative h-[22px]"
               style={{ width: logo.width }}
             >
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 fill
-                className="object-contain grayscale opacity-60"
+                className="object-contain grayscale"
+                quality={100}
               />
             </div>
           ))}
         </div>
+
+        {/* Mobile View */}
+                <div className="md:hidden">
+                  <MobileLogoBanner />
+                </div>
       </div>
     </section>
   )

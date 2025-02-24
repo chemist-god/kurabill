@@ -1,7 +1,7 @@
 import PharmacistNavbar from '@/components/pharmacist-navbar'
 import PharmacistHero from '@/components/pharmacist-hero'
 import PharmacistDashboard from '@/components/pharmacist-dashboard'
-import { PharmaciBanner } from '@/components/pharmaci-banner'
+import { PharmaciBanner } from '@/components/Logo-Banner/pharmaci-banner'
 import { TestimonialsSection } from '@/components/testimonials-section'
 import { FAQSection } from '@/components/faq-section'
 import RevenueSection from '@/components/revenue-section'

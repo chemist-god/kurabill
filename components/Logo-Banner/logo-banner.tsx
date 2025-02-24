@@ -1,4 +1,5 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import { MobileLogoBanner } from './mobile-logo';
 
 export function LogoBanner() {
   const logos = [
@@ -9,7 +10,7 @@ export function LogoBanner() {
     { src: '/assets/logos/pfizer.png', alt: 'Pfizer', width: 100 },
     { src: '/assets/logos/novartis.png', alt: 'Novartis', width: 110 },
     { src: '/assets/logos/merck.png', alt: 'Merck', width: 100 },
-  ]
+  ];
 
   return (
     <section className="w-full bg-white py-16">
@@ -19,12 +20,12 @@ export function LogoBanner() {
           Trusted By
         </h2>
 
-        {/* Logos */}
-        <div className="flex items-center justify-center flex-wrap gap-x-16 gap-y-8">
+        {/* Responsive Logos */}
+        <div className="hidden md:flex items-center justify-center flex-nowrap overflow-x-auto gap-x-16 gap-y-8">
           {logos.map((logo) => (
             <div 
               key={logo.alt} 
-              className="relative h-[40px]"
+              className="relative h-[22px]" 
               style={{ width: logo.width }}
             >
               <Image
@@ -32,11 +33,17 @@ export function LogoBanner() {
                 alt={logo.alt}
                 fill
                 className="object-contain grayscale opacity-60"
+                quality={100}
               />
             </div>
           ))}
         </div>
+
+        {/* Mobile View */}
+        <div className="md:hidden">
+          <MobileLogoBanner />
+        </div>
       </div>
     </section>
-  )
+  );
 }

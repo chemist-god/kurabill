@@ -1,5 +1,5 @@
 import HeroSection  from "../components/hero-section";
-import { LogoBanner } from "@/components/logo-banner";
+import { LogoBanner } from "@/components/Logo-Banner/logo-banner";
 import { FeaturesSection } from "@/components/features-section";
 import { ServicesSection } from "@/components/services-section";
 import { TestimonialsSection } from "@/components/testimonials-section";

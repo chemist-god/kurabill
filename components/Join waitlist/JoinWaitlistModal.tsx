@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const JoinWaitlistModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onClose }) => {
     const [firstName, setFirstName] = useState('');
@@ -8,17 +8,41 @@ const JoinWaitlistModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission logic here
         console.log({ firstName, lastName, email });
-        onClose(); 
+        onClose();
     };
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                onClose();
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener('keydown', handleKeyDown);
+        } else {
+            document.removeEventListener('keydown', handleKeyDown);
+        }
+
+        return () => document.removeEventListener('keydown', handleKeyDown);
+    }, [isOpen, onClose]);
 
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out">
-            <div className="bg-white rounded-lg p-6 w-full max-w-md mx-4">
-                <h2 className="text-xl font-bold mb-4">Join Waitlist</h2>
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out"
+             onClick={onClose} // Clicking outside closes the modal
+        >
+            <div className="bg-white rounded-lg p-6 w-full max-w-[30rem] mx-4 relative"
+                 onClick={(e) => e.stopPropagation()} // Prevents closing when clicking inside
+            >
+                {/* Close Button */}
+                <button onClick={onClose} className="absolute top-3 right-3 text-gray-600 text-xl hover:text-red-600">
+                ✖
+                </button>
+
+                <h2 className="text-xl font-bold mb-4 text-center">Join Waitlist</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label className="block mb-1">Full Name</label>
@@ -59,9 +83,6 @@ const JoinWaitlistModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
                         Submit
                     </button>
                 </form>
-                <button onClick={onClose} className="text-gray-500 mt-4 hover:underline">
-                    Cancel
-                </button>
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import JoinWaitlistModal from '@/components/JoinWaitlistModal'
+import JoinWaitlistModal from '@/components/Join waitlist/JoinWaitlistModal'
 import { useState } from 'react'
 
 const Page = () => {

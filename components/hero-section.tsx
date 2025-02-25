@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import WorldMap from '../components/world-map';
 import { MountainGradient } from './mountain-gradient';
-import JoinWaitlistModal from './JoinWaitlistModal';
+import JoinWaitlistModal from './Join waitlist/JoinWaitlistModal';
 import { useState } from 'react';
 
 

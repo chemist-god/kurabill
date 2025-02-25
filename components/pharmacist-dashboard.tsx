@@ -4,21 +4,21 @@ import Image from 'next/image'
 
 export default function PharmacistDashboard() {
   const pharmacies = [
-    { name: 'Jaywells Pharmacy', image: '/assets/pharmacies/jaywells.png', position: { top: '30%', left: '20%' } },
-    { name: 'Newton Pharmacy', image: '/assets/pharmacies/newton.png', position: { top: '25%', left: '45%' } },
-    { name: 'Carewell Pharmacy', image: '/assets/pharmacies/carewell.png', position: { top: '20%', right: '30%' } },
-    { name: 'Livewell Pharmacy', image: '/assets/pharmacies/livewell.png', position: { top: '35%', right: '15%' } }
+    { name: 'Jaywells Pharmacy', image: '/assets/pharmacies/jaywells.png', position: { top: '12', left: '2%' } },
+    { name: 'Newton Pharmacy', image: '/assets/pharmacies/newton.png', position: { top: '15%', left: '46%' } },
+    { name: 'Carewell Pharmacy', image: '/assets/pharmacies/carewell.png', position: { top: '2%', right: '27%' } },
+    { name: 'Livewell Pharmacy', image: '/assets/pharmacies/livewell.png', position: { top: '22%', right: '5%' } }
   ]
 
   return (
-    <div className="relative w-full bg-[#202F26] overflow-hidden">
+    <div className="relative w-50% bg-[#202F26] overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center">
-        <Image src="/assets/pharmacies/hex-map.png" alt="Hexagon Pattern" layout="fill" className="object-contain opacity-20" />
+        <Image src="/assets/pharmacies/hex-map.png" alt="Hexagon Pattern" layout="fill" className="object-contain opacity-10" />
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
         <Image src="/assets/pharmacies/earth.png" alt="Earth Map" layout="fill" className="object-contain opacity-80" />
       </div>
-      <div className="relative max-w-7xl mx-auto px-6 py-16">
+      <div className="relative max-w-7xl mx-auto px-6 pt-16">
         {pharmacies.map((pharmacy, index) => (
           <motion.div
             key={pharmacy.name}
@@ -33,15 +33,20 @@ export default function PharmacistDashboard() {
               <div className="relative w-14 h-14">
                 <Image src={pharmacy.image} alt={pharmacy.name} layout="fill" className="rounded-full border-2 border-white/80 object-cover" />
               </div>
-              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <span className="text-white text-sm font-medium bg-black/20 px-3 py-1 rounded-full">{pharmacy.name}</span>
+              <div className="absolute -bottom-8 left-1/2   transition-all duration-300">
+                <span className="text-white text-sm font-medium px-3 ">{pharmacy.name}</span>
               </div>
             </div>
           </motion.div>
         ))}
-        <motion.div className="relative mt-10 rounded-xl overflow-hidden shadow-2xl" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
-          <Image src="/assets/pharmacies/dashboard-preview.png" alt="Dashboard Preview" layout="responsive" width={1200} height={675} className="object-cover" />
-        </motion.div>
+        <motion.div
+  className="relative mt-20 rounded-xl overflow-hidden shadow-2xl"
+  style={{ bottom: 0, marginTop: '20%' }} // Add this line
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+>
+  <Image src="/assets/pharmacies/dashboard-preview.png" alt="Dashboard Preview" layout="responsive" width={1200} height={675} className="object-cover" />
+</motion.div>
       </div>
     </div>
   )

@@ -5,19 +5,11 @@ import Image from 'next/image'
 
 export default function PharmacistHero() {
   return (
-    <section className="relative pt-24 pb-16 px-4 md:px-6 bg-[#202F26] overflow-hidden">
-      {/* Radial Gradient Background */}
-      <div className="absolute inset-0 w-full h-full">
-        <div className="relative w-full h-full">
-          <Image
-            src="/assets/pharmacies/radial-gradient.png"
-            alt="Background Gradient"
-            fill
-            className="object-cover opacity-60 mix-blend-overlay"
-            priority
-          />
-        </div>
-      </div>
+    <section className="relative pt-24 pb-10 px-4 md:px-6 bg-[#202F26] overflow-hidden">
+      
+      <div className="absolute inset-0 flex items-center justify-center">
+              <Image src="/assets/pharmacies/hex.png" alt="Hexagon Pattern" layout="fill" className="object-contain " />
+            </div> 
 
       {/* Content with increased z-index to appear above gradient */}
       <div className="max-w-7xl mx-auto text-center relative z-10">

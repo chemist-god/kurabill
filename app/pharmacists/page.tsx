@@ -11,7 +11,7 @@ import PricingSection from '@/components/pricing-section'
 
 export default function PharmacistsPage() {
   return (
-    <div className="min-h-screen bg-[#1B4332]">
+    <div className="min-h-screen">
       <PharmacistNavbar />
       <main>
         <PharmacistHero />

@@ -1,5 +1,8 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import FooterMobile from '@/components/footer-component/footerMobile';
 import logo from '@/public/assets/kurabill-logo-I.png';
 import facebook from '@/public/assets/facebook.png';
 import twitter from '@/public/assets/twitter.png';
@@ -7,6 +10,20 @@ import youtube from '@/public/assets/youtube.png';
 import instagram from '@/public/assets/instagram.png';
 
 export function Footer() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768); // Adjust breakpoint as needed
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
+  if (isMobile) return <FooterMobile />; // Render mobile footer on smaller screens
+
   return (
     <footer className="bg-[#1B4332] text-white px-8 py-16 rounded-t-3xl">
       <div className="max-w-7xl mx-auto">
@@ -15,12 +32,7 @@ export function Footer() {
           {/* Logo Section */}
           <div className="md:col-span-1 flex justify-center md:justify-start">
             <Link href="/">
-              <Image 
-                src={logo} 
-                alt="KuraBill" 
-                width={117} 
-                height={35}
-              />
+              <Image src={logo} alt="KuraBill" width={117} height={35} />
             </Link>
           </div>
 
@@ -74,7 +86,7 @@ export function Footer() {
               <Image src={twitter} alt="Twitter" width={32} height={32} />
             </Link>
             <Link href="#" className="hover:opacity-80">
-              <Image src={youtube} alt="YouTube" width={32} height={32} />
+              <Image src={youtube} alt="YouTube" width={40} height={40} />
             </Link>
             <Link href="#" className="hover:opacity-80">
               <Image src={instagram} alt="Instagram" width={32} height={32} />

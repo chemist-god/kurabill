@@ -19,7 +19,7 @@ export function FeaturesSection() {
               {/* Floating coin */}
               <div className="absolute -top-8 -left-8">
                 <Image
-                  src="/assets/images/coin.png"
+                  src="/assets/images/coin.svg"
                   alt="Stable coin"
                   width={100}
                   height={100}

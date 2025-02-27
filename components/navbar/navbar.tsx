@@ -16,7 +16,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/assets/kurabill-logo.png"
+              src="/assets/kurabill-logo.svg"
               alt="KuraBill"
               width={120}
               height={40}

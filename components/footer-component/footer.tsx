@@ -3,11 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import FooterMobile from '@/components/footer-component/footerMobile';
-import logo from '@/public/assets/kurabill-logo-I.png';
-import facebook from '@/public/assets/facebook.png';
-import twitter from '@/public/assets/twitter.png';
-import youtube from '@/public/assets/youtube.png';
-import instagram from '@/public/assets/instagram.png';
 
 export function Footer() {
   const [isMobile, setIsMobile] = useState(false);
@@ -32,7 +27,7 @@ export function Footer() {
           {/* Logo Section */}
           <div className="md:col-span-1 flex justify-center md:justify-start">
             <Link href="/">
-              <Image src={logo} alt="KuraBill" width={117} height={35} />
+              <Image src="/assets/kurabill-logo-I.svg" alt="KuraBill" width={117} height={35} />
             </Link>
           </div>
 
@@ -80,16 +75,16 @@ export function Footer() {
         <div className="flex justify-between items-center flex-col md:flex-row gap-8">
           <div className="flex gap-4">
             <Link href="#" className="hover:opacity-80">
-              <Image src={facebook} alt="Facebook" width={32} height={32} />
+              <Image src="/assets/facebook.svg" alt="Facebook" width={24} height={24} />
             </Link>
             <Link href="#" className="hover:opacity-80">
-              <Image src={twitter} alt="Twitter" width={32} height={32} />
+              <Image src="/assets/twitter.svg" alt="Twitter" width={24} height={24} />
             </Link>
             <Link href="#" className="hover:opacity-80">
-              <Image src={youtube} alt="YouTube" width={40} height={40} />
+              <Image src="/assets/youtube.svg" alt="YouTube" width={30} height={30} />
             </Link>
             <Link href="#" className="hover:opacity-80">
-              <Image src={instagram} alt="Instagram" width={32} height={32} />
+            <Image src="/assets/instagram.svg" alt="YouTube" width={24} height={24} />
             </Link>
           </div>
 

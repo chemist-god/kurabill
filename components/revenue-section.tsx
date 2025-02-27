@@ -5,22 +5,22 @@ import { motion } from 'framer-motion';
 
 const features = [
     {
-        icon: '/assets/pharmacies/sales-analytics.png',
+        icon: '/assets/pharmacies/sales-analytics.svg',
         title: 'Sales Analytics',
         description: 'Track, analyze, and optimize your pharmacy\'s sales performance with Kurabill\'s powerful analytics tools.'
     },
         {
-            icon: '/assets/pharmacies/transparency.png',
+            icon: '/assets/pharmacies/transparency.svg',
             title: 'Transparency',
             description: 'Clear insights and open communication for seamless pharmacy management.'
         },
         {
-            icon: '/assets/pharmacies/customer-focus.png',
+            icon: '/assets/pharmacies/customer-focus.svg',
             title: 'Customer Focus',
             description: 'Putting your customers at the heart of every solution we provide.'
         },
         {
-            icon: '/assets/pharmacies/market-expansion.png',
+            icon: '/assets/pharmacies/market-expansion.svg',
             title: 'Market Expansion',
         description: 'Unlock new opportunities and reach more customers across borders'
     }

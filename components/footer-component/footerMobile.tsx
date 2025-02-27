@@ -1,10 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/assets/kurabill-logo-I.png";
-import facebook from "@/public/assets/facebook.png";
-import twitter from "@/public/assets/twitter.png";
-import youtube from "@/public/assets/youtube.png";
-import instagram from "@/public/assets/instagram.png";
 
 const FooterMobile: React.FC = () => {
   return (
@@ -13,7 +8,7 @@ const FooterMobile: React.FC = () => {
         {/* Logo */}
         <div className="flex justify-center mb-[3.5rem]">
           <Link href="/">
-            <Image src={logo} alt="KuraBill" width={117} height={35} />
+            <Image src="/assets/kurabill-logo-I.svg" alt="KuraBill" width={117} height={35} />
           </Link>
         </div>
 
@@ -131,16 +126,16 @@ const FooterMobile: React.FC = () => {
         {/* Social Links */}
         <div className="flex justify-center gap-4 mt-[8rem]">
           <Link href="#" className="hover:opacity-80">
-            <Image src={facebook} alt="Facebook" width={24} height={24} />
+            <Image src="/assets/facebook.svg" alt="Facebook" width={24} height={24} />
           </Link>
           <Link href="#" className="hover:opacity-80">
-            <Image src={twitter} alt="Twitter" width={24} height={24} />
+            <Image src="/assets/twitter.svg" alt="Twitter" width={24} height={24} />
           </Link>
           <Link href="#" className="hover:opacity-80">
-            <Image src={youtube} alt="YouTube" width={28} height={28} />
+            <Image src="/assets/youtube.svg" alt="YouTube" width={28} height={28} />
           </Link>
           <Link href="#" className="hover:opacity-80">
-            <Image src={instagram} alt="Instagram" width={24} height={24} />
+            <Image src="/assets/instagram.svg" alt="Instagram" width={24} height={24} />
           </Link>
         </div>
 

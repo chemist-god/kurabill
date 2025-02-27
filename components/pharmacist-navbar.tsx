@@ -1,6 +1,7 @@
 "use client"
 import Link from 'next/link';
 import Image from 'next/image';
+import NavbarMobile from './navbar/navbarMobile';
 
 export default function PharmacistNavbar() {
   return (
@@ -10,7 +11,7 @@ export default function PharmacistNavbar() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image 
-              src="/assets/kurabill-logo-white.png"
+              src="/assets/kurabill-logo-white.svg"
               alt="KuraBill"
               width={120}
               height={40}
@@ -57,6 +58,8 @@ export default function PharmacistNavbar() {
               Join Waitlist
             </Link>
           </div>
+          {/* Mobile Navbar */}
+          <NavbarMobile />
         </div>
       </nav>
     </header>

@@ -3,13 +3,13 @@ import { MobileLogoBanner } from './mobile-logo'
 
 export function PharmaciBanner() {
   const logos = [
-    { src: '/assets/logos/roku.png', alt: 'Roku', width: 100 },
-    { src: '/assets/logos/syneos-health.png', alt: 'Syneos Health', width: 120 },
-    { src: '/assets/logos/nemours.png', alt: 'Nemours', width: 110 },
-    { src: '/assets/logos/klarna.png', alt: 'Klarna', width: 100 },
-    { src: '/assets/logos/pfizer.png', alt: 'Pfizer', width: 100 },
-    { src: '/assets/logos/novartis.png', alt: 'Novartis', width: 110 },
-    { src: '/assets/logos/merck.png', alt: 'Merck', width: 100 },
+    { src: '/assets/logos/roku.svg', alt: 'Roku', width: 100 },
+    { src: '/assets/logos/syneos-health.svg', alt: 'Syneos Health', width: 100 },
+    { src: '/assets/logos/nemours.svg', alt: 'Nemours', width: 110 },
+    { src: '/assets/logos/klarna.svg', alt: 'Klarna', width: 100 },
+    { src: '/assets/logos/pfizer.svg', alt: 'Pfizer', width: 100 },
+    { src: '/assets/logos/novartis.svg', alt: 'Novartis', width: 110 },
+    { src: '/assets/logos/merck.svg', alt: 'Merck', width: 100 },
   ]
 
   return (

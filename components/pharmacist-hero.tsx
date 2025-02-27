@@ -8,7 +8,7 @@ export default function PharmacistHero() {
     <section className="relative pt-24 pb-10 px-4 md:px-6 bg-[#202F26] overflow-hidden">
       
       <div className="absolute inset-0 flex items-center justify-center">
-              <Image src="/assets/pharmacies/hex.png" alt="Hexagon Pattern" layout="fill" className="object-contain " />
+              <Image src="/assets/pharmacies/hex.png" alt="Hexagon Pattern" fill className="object-contain " />
             </div> 
 
       {/* Content with increased z-index to appear above gradient */}

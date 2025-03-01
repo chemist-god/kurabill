@@ -1,13 +1,13 @@
 'use client'
 import { motion } from 'framer-motion';
-import WorldMap from '../components/world-map';
-import { MountainGradient} from '../components/mountain-gradient';
-import JoinWaitlistModal from './Join waitlist/JoinWaitlistModal';
+import WorldMap from '../Hero/world-map';
+import { MountainGradient} from '../Hero/mountain-gradient';
+import JoinWaitlistModal from '../Join waitlist/JoinWaitlistModal';
 import { useState } from 'react';
-import MedicationBubbles from '../components/MedicationBubbles';
-import CountryProfiles from '../components/CountryProfiles';
-import CoinAnimations from '../components/CoinAnimations';
-import { MedicationBubble, CountryProfile } from '../types';
+import MedicationBubbles from '../Hero/MedicationBubbles';
+import CountryProfiles from '../Hero/CountryProfiles';
+import CoinAnimations from '../Hero/CoinAnimations';
+import { MedicationBubble, CountryProfile } from '@/types';
 
 const medicationBubbles: MedicationBubble[] = [
   {

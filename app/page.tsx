@@ -1,4 +1,4 @@
-import HeroSection  from "../components/hero-section";
+import HeroMain from "@/components/Hero/HeroMain";
 import { LogoBanner } from "@/components/Logo-Banner/logo-banner";
 import { FeaturesSection } from "@/components/features-section";
 import { ServicesSection } from "@/components/services-component/services-section";
@@ -12,7 +12,7 @@ export default function Home() {
     <>
     <Navbar />
     <main>
-      <HeroSection />
+      <HeroMain/>
       <LogoBanner />
       <FeaturesSection />
       <ServicesSection />

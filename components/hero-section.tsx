@@ -1,13 +1,15 @@
 'use client'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import WorldMap from '../components/world-map';
-import { MountainGradient } from './mountain-gradient';
+import { MountainGradient} from '../components/mountain-gradient';
 import JoinWaitlistModal from './Join waitlist/JoinWaitlistModal';
 import { useState } from 'react';
+import MedicationBubbles from '../components/MedicationBubbles';
+import CountryProfiles from '../components/CountryProfiles';
+import CoinAnimations from '../components/CoinAnimations';
+import { MedicationBubble, CountryProfile } from '../types';
 
-
-const medicationBubbles = [
+const medicationBubbles: MedicationBubble[] = [
   {
     id: 1,
     type: 'Tooth Ache',
@@ -32,9 +34,9 @@ const medicationBubbles = [
     icon: '💉',
     position: { bottom: '30%', left: '45%' }
   }
-]
+];
 
-const countryProfiles = [
+const countryProfiles: CountryProfile[] = [
   {
     id: 1,
     country: 'USA',
@@ -70,7 +72,7 @@ const countryProfiles = [
     image: '/assets/images/france.png',
     position: { top: '45%', right: '20%' }
   }
-]
+];
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -114,117 +116,20 @@ const HeroSection = () => {
           Join Waitlist
         </motion.button>
       </div>
-
       {/* Modal */}
       <JoinWaitlistModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-
       {/* Map Section */}
       <div className="relative mt-16">
         <div className="max-w-7xl mx-auto px-6">
           <WorldMap />
-
-          {/* Medication Bubbles */}
-          {medicationBubbles.map((bubble) => (
-            <motion.div
-              key={bubble.id}
-              className="absolute bg-white rounded-lg px-4 py-2 shadow-lg flex items-center gap-2 cursor-default hover:shadow-xl transition-shadow duration-300"
-              style={bubble.position as React.CSSProperties}
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5, delay: bubble.id * 0.1 }}
-            >
-              <div className="bg-gray-100 rounded-full p-0.5">
-              <span>{bubble.icon}</span>
-              </div>
-              <span>{bubble.type}</span>
-            </motion.div>
-          ))}
-
-          {/* Country Profiles */}
-          {countryProfiles.map((profile) => (
-            <motion.div
-              key={profile.id}
-              className="absolute"
-              style={profile.position as React.CSSProperties}
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.5, delay: profile.id * 0.2 }}
-            >
-              <div className="relative">
-                <Image
-                  src={profile.image}
-                  alt={profile.country}
-                  width={80}
-                  height={80}
-                  className="rounded-full border-2 border-white "
-                />
-                <Image
-                  src={profile.flag}
-                  alt={`${profile.country} flag`}
-                  width={40}
-                  height={40}
-                  className="absolute -top-2 -right-2"
-                />
-              </div>
-            </motion.div>
-          ))}
-
-          {/* Coin Animations */}
-          {/* First Coin */}
-          <motion.div
-            className="absolute z-10 top-[7%] right-[12%]"  
-            animate={{
-              y: [-10, 0, -10],
-              rotate: [0, 360]
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            <Image
-              src="/assets/images/coin.png"
-              alt="Stable coin"
-              width={42}
-              height={42}
-              className="w-full h-full object-contain"
-            />
-          </motion.div>
-
-          {/* Second Coin */}
-          <motion.div
-            className="absolute z-10 bottom-[40%] left-[8%]"  
-            animate={{
-              y: [-20, 0, -20],
-              rotate: [0, 360]
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1 
-            }}
-          >
-            <Image
-              src="/assets/images/coin.png"
-              alt="Stable coin"
-              width={78}  // Slightly larger
-              height={78}
-              className="w-full h-full object-contain"
-            />
-          </motion.div>
-
+          <MedicationBubbles bubbles={medicationBubbles} />
+          <CountryProfiles profiles={countryProfiles} />
+          <CoinAnimations />
         </div>
-
-        {/* Mountain Gradiet */}
-          <MountainGradient />
-        
+        <MountainGradient />
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default HeroSection;

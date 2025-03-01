@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MedicationBubble } from '../types';
+import { MedicationBubble } from '@/types';
 
 const MedicationBubbles = ({ bubbles }: { bubbles: MedicationBubble[] }) => {
   return (

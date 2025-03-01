@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { CountryProfile } from '../types';
+import { CountryProfile } from '@/types';
 
 const CountryProfiles = ({ profiles }: { profiles: CountryProfile[] }) => {
   return (

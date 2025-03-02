@@ -3,7 +3,7 @@ import WhyChooseKurabill from '@/components/why-choose-kurabill';
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen pt-24 px-6">
+    <main className="min-h-screen pt-1 ">
       <AboutHero />
       <WhyChooseKurabill />
     </main>

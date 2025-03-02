@@ -26,7 +26,7 @@ export default function NavbarMobile() {
                 setIsMobileMenuOpen(false);
               }}
               className={`w-full py-2 rounded-lg text-sm font-medium transition-all text-center
-                ${activeTab === "patients" ? "bg-[#44724A] text-white" : "text-gray-700"}`}
+                ${activeTab === "patients" ? "bg-[#336E2E] text-white" : "text-gray-700"}`}
             >
               For Patients
             </button>
@@ -37,7 +37,7 @@ export default function NavbarMobile() {
                 setIsMobileMenuOpen(false);
               }}
               className={`w-full py-2 rounded-lg text-sm font-medium transition-all text-center
-                ${activeTab === "pharmacists" ? "bg-[#44724A] text-white" : "text-gray-700"}`}
+                ${activeTab === "pharmacists" ? "bg-[#336E2E] text-white" : "text-gray-700"}`}
             >
               For Pharmacists
             </button>
@@ -59,7 +59,7 @@ export default function NavbarMobile() {
             </Link>
             <Link
               href="/waitlist"
-              className="border border-[#44724A] text-[#44724A] px-6 py-2 rounded-full 
+              className="border border-[#336E2E] text-[#44724A] px-6 py-2 rounded-full 
               hover:bg-[#44724A] hover:text-white transition-all text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >

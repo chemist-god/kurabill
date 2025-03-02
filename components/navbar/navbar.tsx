@@ -25,14 +25,14 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Toggle Buttons */}
-          <div className="hidden md:flex items-center bg-[#E6F0E9] rounded-full p-1">
+          <div className="hidden md:flex items-center bg-[#E4EEEB] rounded-full p-1">
             <button
               onClick={() => {
                 setActiveTab("patients");
                 router.push("/");
               }}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all
-                ${activeTab === "patients" ? "bg-[#44724A] text-white" : "text-gray-700"}`}
+                ${activeTab === "patients" ? "bg-[#336E2E] text-white" : "text-gray-700"}`}
             >
               For Patients
             </button>
@@ -42,7 +42,7 @@ export default function Navbar() {
                 router.push("/pharmacists");
               }}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all
-                ${activeTab === "pharmacists" ? "bg-[#44724A] text-white" : "text-gray-700"}`}
+                ${activeTab === "pharmacists" ? "bg-[#336E2E] text-white" : "text-gray-700"}`}
             >
               For Pharmacists
             </button>
@@ -57,7 +57,7 @@ export default function Navbar() {
             <Link
               href="/waitlist"
               className="border border-[#44724A] text-[#44724A] px-6 py-2 rounded-full 
-                       hover:bg-[#44724A] hover:text-white transition-all"
+                       hover:bg-[#336E2E] hover:text-white transition-all"
             >
               Join Waitlist
             </Link>

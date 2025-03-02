@@ -5,7 +5,7 @@ import PharmacistNavbar from '@/components/pharmacist-navbar';
 export default function AboutPage() {
   return (
     <><PharmacistNavbar />
-    <main className="min-h-screen pt-24 px-6">
+    <main className="min-h-screen pt-1 ">
       <AboutHero />
       <WhyChooseKurabill />
     </main>

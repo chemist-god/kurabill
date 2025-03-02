@@ -108,7 +108,7 @@ const HeroSection = () => {
         </motion.p>
         <motion.button
           onClick={() => setIsModalOpen(true)}
-          className="bg-green-700 text-white px-8 py-3 rounded-full text-lg hover:bg-green-800 transition-colors"
+          className="bg-[#336E2E] text-white px-8 py-3 rounded-full text-lg hover:bg-green-800 transition-colors"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}

@@ -1,10 +1,11 @@
 "use client"
 import Link from 'next/link';
 import Image from 'next/image';
+import PharmacistNavbarMobile from './pharmaciNavbarMobile'
 
 export default function PharmacistNavbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1B4332]/90 backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#202F26] backdrop-blur-md">
       <nav className="max-w-7xl mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -17,24 +18,22 @@ export default function PharmacistNavbar() {
               className="h-10 w-auto"
             />
           </Link>
-
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <div className="flex items-center bg-[#2D5A42] rounded-full p-1">
+            <div className="flex items-center bg-[#2B4033] rounded-full p-1">
               <Link href="/"
                 className="px-6 py-2 rounded-full text-white hover:text-white/90"
               >
                 For Patients
               </Link>
               <button
-                className="px-6 py-2 rounded-full bg-[#44724A] text-white"
+                className="px-6 py-2 rounded-full bg-[#336E2E] text-white"
                 disabled 
               >
                 For Pharmacists
               </button>
             </div>
           </div>
-
           {/* Right Nav Items */}
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/pharmacists/pricing" className="text-white hover:text-white/80">
@@ -57,6 +56,8 @@ export default function PharmacistNavbar() {
               Join Waitlist
             </Link>
           </div>
+          {/* Mobile Navbar */}
+          <PharmacistNavbarMobile />
         </div>
       </nav>
     </header>

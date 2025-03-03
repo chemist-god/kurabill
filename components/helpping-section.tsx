@@ -27,7 +27,7 @@ const HelpingSection: React.FC = () => {
                 > 
                 </motion.h1>
                 <motion.p
-                    className="text-lg md:text-xl text-white mb-8"
+                    className="hidden md:block text-lg md:text-xl text-white mb-8 "
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}

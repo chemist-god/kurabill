@@ -47,10 +47,14 @@ export function TestimonialsSection() {
         <h2 className="text-4xl font-bold mb-4">Testimonials</h2>
         
         {/* Subtitle */}
-        <div className="flex justify-center mb-12">
-          <span className="inline-block px-6 py-2 rounded-full bg-gray-100 text-gray-800">
+        <div className="flex justify-center mb-[2rem]">
+          <span className="manrope-text inline-block px-6 py-2 rounded-full bg-[#2D292940] text-gray-800 border-2 border-[#A69B9B]">
             Don&apos;t Just Take Our Word for It
           </span>
+        </div>
+
+        <div>
+          <h3 className="text-lg md:text-4xl font-semibold mb-[2rem]">Hear From other Customers Who Use Kurabill</h3>
         </div>
 
         {/* Testimonial Display */}
@@ -64,7 +68,7 @@ export function TestimonialsSection() {
               className="rounded-full"
             />
             <div className="ml-4">
-              <h4 className="font-semibold">{testimonials[currentSlide].name}</h4>
+              <h4 className="manrope-text font-bold">{testimonials[currentSlide].name}</h4>
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
                   <svg
@@ -79,20 +83,20 @@ export function TestimonialsSection() {
               </div>
             </div>
           </div>
-          <p className="text-gray-600 mb-4">{testimonials[currentSlide].text}</p>
-          <span className="text-sm text-gray-500">{testimonials[currentSlide].date}</span>
+          <p className="manrope-text text-gray-600 mb-4">{testimonials[currentSlide].text}</p>
+          <span className="manrope-text text-sm text-gray-500">{testimonials[currentSlide].date}</span>
         </div>
 
         {/* Navigation Buttons */}
         <div className="flex justify-between mt-8">
           <button
-            className="bg-gray-200 text-black px-4 py-2 rounded-full hover:bg-gray-300 transition-colors"
+            className="manrope-text bg-gray-200 text-black px-4 py-2 rounded-full hover:bg-gray-300 transition-colors"
             onClick={handlePrev}
           >
             Previous
           </button>
           <button
-            className="bg-gray-200 text-black px-4 py-2 rounded-full hover:bg-gray-300 transition-colors"
+            className="manrope-text bg-gray-200 text-black px-4 py-2 rounded-full hover:bg-gray-300 transition-colors"
             onClick={handleNext}
           >
             Next

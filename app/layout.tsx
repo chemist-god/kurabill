@@ -1,18 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Manrope, DM_Sans, Roboto } from "next/font/google";
 import "./globals.css";
-import Navbar  from "@/components/navbar/navbar";
+import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer-component/footer";
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Import Fonts
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
+});
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["400", "700"], // Normal and Bold
 });
 
 export const metadata: Metadata = {
@@ -27,9 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${manrope.variable} ${dmSans.variable} ${roboto.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />
@@ -37,4 +46,3 @@ export default function RootLayout({
     </html>
   );
 }
-

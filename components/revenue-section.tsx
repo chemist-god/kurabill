@@ -39,13 +39,13 @@ const RevenueSection: React.FC = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h3 className="text-sm font-medium text-gray-600 mb-4">
+                        <p className="text-sm font-medium text-gray-600 mb-4">
                             Go Digital & Sell to the world
-                        </h3>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                        </p>
+                        <h2 className="dm-sans-text text-2xl sm:text-3xl md:text-[2.4rem] font-semibold mb-6">
                             X10 your Revenue with Kurabill
                         </h2>
-                        <p className="text-gray-600 text-lg">
+                        <p className="text-gray-600 text-sm sm:text-base md:text-lg">
                             Whatever you need, Kurabill is built with solutions in mind. Need to customize further - no problem.
                         </p>
                     </motion.div>

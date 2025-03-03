@@ -12,6 +12,13 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        grifter: ["Grifter", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        manrope: ["Manrope", "sans-serif"],
+        dmSans: ["DM_Sans", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"]
+      },
     },
   },
   plugins: [],

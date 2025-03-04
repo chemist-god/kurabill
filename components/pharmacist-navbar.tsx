@@ -9,7 +9,7 @@ export default function PharmacistNavbar() {
       <nav className="max-w-7xl mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/pharmacists" className="flex-shrink-0">
             <Image 
               src="/assets/kurabill-logo-white.png"
               alt="KuraBill"
@@ -26,12 +26,14 @@ export default function PharmacistNavbar() {
               >
                 For Patients
               </Link>
-              <button
-                className="px-6 py-2 rounded-full bg-[#336E2E] text-white"
-                disabled 
-              >
-                For Pharmacists
-              </button>
+              <Link href="/pharmacists">
+                <button
+                  className="px-6 py-2 rounded-full bg-[#336E2E] text-white"
+                   
+                >
+                  For Pharmacists
+                </button>
+              </Link>
             </div>
           </div>
           {/* Right Nav Items */}

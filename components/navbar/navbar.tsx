@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
+import KurabillLogo from "./KurabillLogo";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import NavbarMobile from "./navbarMobile";
@@ -15,13 +15,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <Image
-              src="/assets/kurabill-logo.png"
-              alt="KuraBill"
-              width={120}
-              height={40}
-              className="h-10 w-auto"
-            />
+            <KurabillLogo />
           </Link>
 
           {/* Desktop Toggle Buttons */}

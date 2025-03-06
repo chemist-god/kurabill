@@ -11,7 +11,7 @@ export default function PharmacistNavbar() {
           {/* Logo */}
           <Link href="/pharmacists" className="flex-shrink-0">
             <Image 
-              src="/assets/kurabill-logo-white.png"
+              src="/assets/kurabill-logo-white.svg"
               alt="KuraBill"
               width={120}
               height={40}

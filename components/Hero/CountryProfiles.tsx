@@ -13,18 +13,20 @@ const CountryProfiles = ({ profiles }: { profiles: CountryProfile[] }) => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.5, delay: profile.id * 0.2 }}
+          transition={{ duration: 0.2, delay: profile.id * 0.2 }}
         >
           <div className="relative">
+            {/* Load country profile SVG */}
             <Image
-              src={profile.image}
+              src={`/assets/images/${profile.image}`}
               alt={profile.country}
               width={80}
               height={80}
               className="rounded-full"
             />
+            {/* Load country flag SVG */}
             <Image
-              src={profile.flag}
+              src={`/assets/flags/${profile.flag}`}
               alt={`${profile.country} flag`}
               width={40}
               height={40}

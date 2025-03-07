@@ -29,29 +29,29 @@ const countryProfiles = [
   {
     id: 1,
     country: 'USA',
-    flag: '/assets/flags/usa.png',    
-    image: '/assets/images/usa.png',   
+    flag: 'usa.svg',    
+    image: 'usa.svg',   
     position: { top: '16%', right: '18%' }
   },
   {
     id: 2,
     country: 'Ghana',
-    flag: '/assets/flags/gh.png',
-    image: '/assets/images/gh.png',
+    flag: 'gh.svg',
+    image: 'gh.svg',
     position: { top: '-8%', left: '16%' }
   },
   {
     id: 3,
     country: 'Canada',
-    flag: '/assets/flags/canada.png',
-    image: '/assets/images/canada.png',
+    flag: 'canada.svg',
+    image: 'canada.svg',
     position: { bottom: '39%', right: '28%' }
   },
   {
     id: 4,
     country: 'Nigeria',
-    flag: '/assets/flags/nigeria.png',
-    image: '/assets/images/nigeria.png',
+    flag: 'nigeria.svg',
+    image: 'nigeria.svg',
     position: { top: '27%', left: '22%' }
   }
 ];
@@ -150,14 +150,14 @@ const HeroMobile = () => {
             >
               <div className="relative">
                 <Image
-                  src={profile.image}
+                  src={`/assets/images/${profile.image}`}
                   alt={profile.country}
                   width={48}
                   height={48}
                   className="rounded-full "
                 />
                 <Image
-                  src={profile.flag}
+                  src={`/assets/flags/${profile.flag}`}
                   alt={`${profile.country} flag`}
                   width={25}
                   height={30}

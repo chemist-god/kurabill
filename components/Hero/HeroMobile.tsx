@@ -181,18 +181,18 @@ const HeroMobile = () => {
             }}
           >
             <Image
-              src="/assets/images/coin.png"
+              src="/assets/images/coin.svg"
               alt="Stable coin"
-              width={32}
-              height={32}
-              className="w-full h-full object-contain"
+              width={45}
+              height={45}
+              className=" object-contain"
             />
           </motion.div>
           {/* Second Coin */}
           <motion.div
             className="absolute z-10 bottom-[30%] left-[4%]"
             animate={{
-              y: [-20, 0, -20],
+              y: [-10, 0, -10],
               rotate: [0, 360]
             }}
             transition={{
@@ -203,11 +203,11 @@ const HeroMobile = () => {
             }}
           >
             <Image
-              src="/assets/images/coin.png"
+              src="/assets/images/coins.svg"
               alt="Stable coin"
-              width={68}
-              height={68}
-              className="w-full h-full object-contain"
+              width={85}
+              height={85}
+              // className="w-full h-full object-contain"
             />
           </motion.div>
         </div>

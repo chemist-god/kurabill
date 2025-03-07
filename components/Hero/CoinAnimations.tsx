@@ -18,11 +18,11 @@ const CoinAnimations = () => {
         }}
       >
         <Image
-          src="/assets/images/coin.png"
+          src="/assets/images/coin.svg"
           alt="Stable coin"
-          width={42}
-          height={42}
-          className="w-full h-full object-contain"
+          width={80}
+          height={80}
+          className="object-contain"
         />
       </motion.div>
       {/* Second Coin */}
@@ -40,7 +40,7 @@ const CoinAnimations = () => {
         }}
       >
         <Image
-          src="/assets/images/coin.png"
+          src="/assets/images/coins.svg"
           alt="Stable coin"
           width={78}
           height={78}

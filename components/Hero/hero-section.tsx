@@ -40,36 +40,36 @@ const countryProfiles: CountryProfile[] = [
   {
     id: 1,
     country: 'USA',
-    flag: '/assets/flags/usa.png',    
-    image: '/assets/images/usa.png',   
+    flag: '/assets/flags/usa.svg',    
+    image: '/assets/images/usa.svg',   
     position: { top: '5%', left: '20%' }
   },
   {
     id: 2,
     country: 'Ghana',
-    flag: '/assets/flags/gh.png',
-    image: '/assets/images/gh.png',
+    flag: '/assets/flags/gh.svg',
+    image: '/assets/images/gh.svg',
     position: { top: '55%', left: '30%' }
   },
   {
     id: 3,
     country: 'Canada',
-    flag: '/assets/flags/canada.png',
-    image: '/assets/images/canada.png',
+    flag: '/assets/flags/canada.svg',
+    image: '/assets/images/canada.svg',
     position: { top: '36%', left: '45%' }
   },
   {
     id: 4,
     country: 'Nigeria',
-    flag: '/assets/flags/nigeria.png',
-    image: '/assets/images/nigeria.png',
+    flag: '/assets/flags/nigeria.svg',
+    image: '/assets/images/nigeria.svg',
     position: { top: '-4.5%', right: '32%' }
   },
   {
     id: 5,
     country: 'France',
-    flag: '/assets/flags/france.png',
-    image: '/assets/images/france.png',
+    flag: '/assets/flags/france.svg',
+    image: '/assets/images/france.svg',
     position: { top: '45%', right: '20%' }
   }
 ];

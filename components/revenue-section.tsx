@@ -9,19 +9,19 @@ const features = [
         title: 'Sales Analytics',
         description: 'Track, analyze, and optimize your pharmacy\'s sales performance with Kurabill\'s powerful analytics tools.'
     },
-        {
-            icon: '/assets/pharmacies/transparency.png',
-            title: 'Transparency',
-            description: 'Clear insights and open communication for seamless pharmacy management.'
-        },
-        {
-            icon: '/assets/pharmacies/customer-focus.png',
-            title: 'Customer Focus',
-            description: 'Putting your customers at the heart of every solution we provide.'
-        },
-        {
-            icon: '/assets/pharmacies/market-expansion.png',
-            title: 'Market Expansion',
+    {
+        icon: '/assets/pharmacies/transparency.png',
+        title: 'Transparency',
+        description: 'Clear insights and open communication for seamless pharmacy management.'
+    },
+    {
+        icon: '/assets/pharmacies/customer-focus.png',
+        title: 'Customer Focus',
+        description: 'Putting your customers at the heart of every solution we provide.'
+    },
+    {
+        icon: '/assets/pharmacies/market-expansion.png',
+        title: 'Market Expansion',
         description: 'Unlock new opportunities and reach more customers across borders'
     }
 ];
@@ -42,7 +42,7 @@ const RevenueSection: React.FC = () => {
                         <p className="text-sm font-medium text-gray-600 mb-4">
                             Go Digital & Sell to the world
                         </p>
-                        <h2 className="dm-sans-text text-2xl sm:text-3xl md:text-[2.4rem] font-semibold mb-6">
+                        <h2 className="text-2xl sm:text-3xl md:text-[2.4rem] font-semibold mb-6">
                             X10 your Revenue with Kurabill
                         </h2>
                         <p className="text-gray-600 text-sm sm:text-base md:text-lg">
@@ -58,7 +58,7 @@ const RevenueSection: React.FC = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <Image
-                            src="/assets/pharmacies/sales-background.png"
+                            src="/assets/pharmacies/sales-background.svg"
                             alt="Sales Dashboard"
                             width={600}
                             height={400}
@@ -72,12 +72,12 @@ const RevenueSection: React.FC = () => {
                     {features.map((feature, index) => (
                         <motion.div
                             key={feature.title}
-                            className="p-6 rounded-xl hover:shadow-lg transition-all duration-300"
+                            className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
-                            <div className="bg-gray-50 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                            <div className="bg-gray-100 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                                 <Image
                                     src={feature.icon}
                                     alt={feature.title}
@@ -87,7 +87,7 @@ const RevenueSection: React.FC = () => {
                                 />
                             </div>
                             <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                            <p className="text-gray-600">{feature.description}</p>
+                            <p className="text-gray-600 text-sm sm:text-base">{feature.description}</p>
                         </motion.div>
                     ))}
                 </div>

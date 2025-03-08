@@ -23,7 +23,7 @@ const WhyChooseKurabill = () => {
           <div>
             {/* Images */}
             <div className=" justify-center mb-8 hidden md:flex">
-              <Image src="/assets/about/man.png" alt="Pharmacist 1" width={124} height={178} className="rounded-lg shadow-md" />
+              <Image src="/assets/about/man.svg" alt="Pharmacist 1" width={124} height={178} className="rounded-lg shadow-md mr-[25rem]" />
             </div>
             {/* Content */}
             <div className="space-y-4">
@@ -34,7 +34,7 @@ const WhyChooseKurabill = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <div className="bg-gray-200 p-2 rounded-full">
-                  <Image src="/assets/about/icon.png" alt="Icon 1" width={100} height={100} className="rounded-full" />
+                  <Image src="/assets/about/icon.svg" alt="Icon 1" width={100} height={100} className="rounded-full" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Do Business With Less Stress</h3>
@@ -50,7 +50,7 @@ const WhyChooseKurabill = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <div className="bg-gray-200 p-2 rounded-full">
-                  <Image src="/assets/about/icon.png" alt="Icon 2" width={100} height={100} className="rounded-full" />
+                  <Image src="/assets/about/icon.svg" alt="Icon 2" width={100} height={100} className="rounded-full" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Digital Pharmacy</h3>
@@ -66,7 +66,7 @@ const WhyChooseKurabill = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
                 <div className="bg-gray-200 p-2 rounded-full">
-                  <Image src="/assets/about/icon.png" alt="Icon 3" width={100} height={100} className="rounded-full" />
+                  <Image src="/assets/about/icon.svg" alt="Icon 3" width={100} height={100} className="rounded-full" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">X10 Your Revenue</h3>
@@ -81,11 +81,11 @@ const WhyChooseKurabill = () => {
           {/* Right Column */}
           <div>
             {/* Images */}
-            <div className="justify-center mb-8 hidden md:flex">
-              <Image src="/assets/about/lady.png" alt="Pharmacist 2" width={161} height={144} className="rounded-lg shadow-md" />
-            </div>
+            <div className="justify-center mb-8 hidden md:flex first-letter:">
+  <Image src="/assets/about/lady.svg" alt="Pharmacist 2" width={161} height={144} className="rounded-lg shadow-md ml-[15rem]" />
+</div>
             <div className="flex justify-center">
-              <Image src="/assets/about/doctor.png" alt="Pharmacist 3" width={416} height={450} className="rounded-lg shadow-md" />
+              <Image src="/assets/about/doctor.svg" alt="Pharmacist 3" width={416} height={450} className="rounded-lg shadow-md" />
             </div>
           </div>
         </div>

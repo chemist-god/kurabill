@@ -42,7 +42,7 @@ export function ServicesSection() {
         {/* Hero Image */}
         <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] rounded-2xl overflow-hidden">
           <Image
-            src="/assets/images/pharmacist.png"
+            src="/assets/images/pharmacist.svg"
             alt="Pharmacist smiling"
             fill
             className="object-cover"

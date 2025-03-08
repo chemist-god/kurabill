@@ -10,7 +10,7 @@ export function FeaturesSection() {
           <div className="w-full md:w-1/2 relative bg-[#FCF6ED]">
             <div className="relative w-full aspect-square max-w-[500px]">
               <Image
-                src="/assets/images/global.png"
+                src="/assets/images/global.svg"
                 alt="Global Healthcare Interface"
                 fill
                 className="object-contain"
@@ -19,7 +19,7 @@ export function FeaturesSection() {
               {/* Floating coin */}
               <div className="absolute -top-8 -left-8">
                 <Image
-                  src="/assets/images/coin.png"
+                  src="/assets/images/coin.svg"
                   alt="Stable coin"
                   width={100}
                   height={100}
@@ -64,7 +64,7 @@ export function FeaturesSection() {
           <div className="w-full md:w-1/2 relative">
             <div className="relative w-full aspect-square max-w-[500px]  rounded-lg">
               <Image
-                src="/assets/images/digital.png"
+                src="/assets/images/digital.svg"
                 alt="Digital Pharmacy Interface"
                 fill
                 className="object-contain"

@@ -8,7 +8,7 @@ export function TestimonialsSection() {
   const testimonials = [
     {
       name: "Stella James",
-      image: "/assets/images/stella.png",
+      image: "/assets/images/stella.svg",
       rating: 4,
       text: "Kurabill has made managing my prescriptions and finding trusted pharmacies a breeze. The convenience it brings to healthcare is unmatched!",
       date: "January 2025",
@@ -16,7 +16,7 @@ export function TestimonialsSection() {
     },
     {
       name: "Stella James",
-      image: "/assets/images/stella.png",
+      image: "/assets/images/stella.svg",
       rating: 5,
       text: "Thanks to Kurabill, I can swiftly and securely make payments for medications from anywhere globally using stablecoins. It's fast, easy, and reliable!",
       date: "January 2025",
@@ -24,7 +24,7 @@ export function TestimonialsSection() {
     },
     {
       name: "Stella James",
-      image: "/assets/images/stella.png",
+      image: "/assets/images/stella.svg",
       rating: 4,
       text: "Kurabill simplifies the process of sending essential medications to loved ones, no matter where they are. With just a few clicks and secure payments.",
       date: "January 2025",
@@ -47,10 +47,10 @@ export function TestimonialsSection() {
         <h2 className="text-4xl font-bold mb-4">Testimonials</h2>
         
         {/* Subtitle */}
-        <div className="flex justify-center mb-[2rem]">
-          <span className="manrope-text inline-block px-6 py-2 rounded-full bg-[#2D292940] text-gray-800 border-2 border-[#A69B9B]">
-            Don&apos;t Just Take Our Word for It
-          </span>
+        <div className="flex justify-center mb-[2rem] md:mb-[4rem]">
+          <span className="manrope-text inline-block px-4 md:px-6 py-1 md:py-2 rounded-full bg-[#2D292940] text-gray-800 border-1 md:border-2 border-[#A69B9B] text-xs md:text-sm">
+             Don&apos;t Just Take Our Word for It
+         </span>
         </div>
 
         <div>

@@ -43,8 +43,8 @@ export default function PharmacistDashboard() {
           </motion.div>
         ))}
         <motion.div
-          className="relative mt-20 rounded-xl overflow-hidden shadow-2xl"
-          style={{ bottom: 0, marginTop: '20%' }}
+          className="relative mt-20  rounded-none overflow-hidden shadow-2xl"
+          style={{ bottom: -1, marginTop: '20%' }}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
         >

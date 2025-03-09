@@ -1,10 +1,12 @@
 "use client"
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import Image from 'next/image'
 import PharmacistHeroMobile from './PharmacistHeroMobile';
+import JoinWaitlistModal from './Join waitlist/JoinWaitlistModal';
+import { useState } from 'react';
 
 export default function PharmacistHero() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   return (
     <>
       <div className="hidden md:block">
@@ -41,23 +43,20 @@ export default function PharmacistHero() {
             Transform your pharmacy into a digital hub with Kurabill streamline orders, manage
             prescriptions, and offer secure online payments, all in one platform
           </motion.p>
-          <motion.div
-            className="relative z-10 "
+          <motion.button
+          onClick={() => setIsModalOpen(true)}
+            className=" bg-[#336E2E] text-white px-8 py-3 rounded-full
+                       hover:bg-[#3a9c55] text-lg "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.2, delay: 0.1 }}
           >
-            <Link 
-              href="/waitlist"
-              className="inline-block bg-[#336E2E] text-white px-6 py-3 rounded-full
-                       hover:bg-[#3a9c55] transition-all duration-300 text-lg font-medium
-                       hover:shadow-lg hover:scale-105 active:scale-100"
-            >
               Join Waitlist
-            </Link>
-          </motion.div>
+          </motion.button>
         </motion.div>
       </div>
+      {/*Modal*/}
+              <JoinWaitlistModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}/>
       {/* Interactive Gradient Effect */}
       <div 
         className="absolute inset-0 bg-gradient-to-b from-transparent to-[#202F26]/50

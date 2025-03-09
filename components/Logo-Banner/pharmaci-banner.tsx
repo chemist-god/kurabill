@@ -16,9 +16,14 @@ export function PharmaciBanner() {
     <section className="w-full bg-white py-16">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <h2 className="text-center text-4xl font-bold mb-12">
-        Join 2K+ pharmacies boosting profits with Kurabill.
-        </h2>
+        <div className="text-center">
+  <h2 className="text-4xl font-bold mb-12 hidden md:block">
+    Join 2K+ pharmacies boosting profits with Kurabill.
+  </h2>
+  <h2 className="text-4xl font-bold mb-12 block md:hidden">
+    Trusted By
+  </h2>
+</div>
 
         {/* Logos */}
         <div className="hidden md:flex items-center justify-center flex-nowrap overflow-x-auto gap-x-16 gap-y-8">

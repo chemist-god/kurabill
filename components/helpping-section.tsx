@@ -1,49 +1,22 @@
-"use client"
-import { motion } from 'framer-motion';
+'use client'
+import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const HelpingSection: React.FC = () => {
     return (
-        <section className="relative py-16 px-4 md:px-6">
+ <section className="relative bg-white py-16 px-4 sm:px-6 lg:px-8">
             {/* Background Image */}
-            <div className="absolute inset-0 hover:bg-gray-200 cursor-pointer">
-                <Link href="/waitlist">
+            <div className="relative overflow-hidden rounded-3 cursor-pointer " >
                 <Image
-                    src="/assets/pharmacies/rectangle-design.png" // Your full background image
+                    src="/assets/pharmacies/rectangle-design.svg"
                     alt="Background Design"
-                    layout="fill"
+                    width={1200}
+                    height={800}
                     objectFit="cover"
-                    className="opacity-100"
+                    style={{ width: '100%', height: '100%', objectPosition: 'center' }}
                 />
-                </Link>
-            </div>
-            <div className="max-w-7xl mx-auto text-center relative z-10">
-                <motion.h1
-                    className="text-4xl md:text-5xl font-bold text-white mb-4"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                > 
-                </motion.h1>
-                <motion.p
-                    className="hidden md:block text-lg md:text-xl text-white mb-8 "
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                    Discover how KuraBill can streamline your pharmacy operations and boost your revenue.
-                </motion.p>
-                    <motion.button
-                        className="cursor-pointer"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
-                    >
-                    </motion.button>
             </div>
         </section>
     );
 };
-
 export default HelpingSection;

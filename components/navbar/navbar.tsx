@@ -4,10 +4,12 @@ import KurabillLogo from "./KurabillLogo";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import NavbarMobile from "./navbarMobile";
+import JoinWaitlistModal from "../Join waitlist/JoinWaitlistModal";
 
 export default function Navbar() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<"patients" | "pharmacists">("patients");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#F5F9F7]">
@@ -48,14 +50,17 @@ export default function Navbar() {
             <Link href="/testimonials" className="text-gray-600 hover:text-black">Testimonials</Link>
             <Link href="/faqs" className="text-gray-600 hover:text-black">FAQs</Link>
             <Link href="/about" className="text-gray-600 hover:text-black">About Us</Link>
-            <Link
-              href="/waitlist"
-              className="border border-[#44724A] text-[#44724A] px-6 py-2 rounded-full 
+            <button
+            onClick={() => setIsModalOpen(true)}
+            className="border border-[#44724A] text-[#44724A] px-6 py-2 rounded-full 
                        hover:bg-[#336E2E] hover:text-white transition-all"
             >
-              Join Waitlist
-            </Link>
+            Join Waitlist
+            </button>
           </div>
+        
+          {/*Modal*/}
+          <JoinWaitlistModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
           {/* Mobile Navbar */}
           <NavbarMobile />

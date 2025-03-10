@@ -8,9 +8,11 @@ import facebook from '@/public/assets/facebook.png';
 import twitter from '@/public/assets/twitter.png';
 import youtube from '@/public/assets/youtube.png';
 import instagram from '@/public/assets/instagram.png';
+import JoinWaitlistModal from '../Join waitlist/JoinWaitlistModal';
 
 export function Footer() {
   const [isMobile, setIsMobile] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -93,13 +95,15 @@ export function Footer() {
             </Link>
           </div>
 
-          <Link 
-            href="/waitlist" 
+          <button 
+          onClick={() => setIsModalOpen(true)}
             className="bg-white text-[#1B4332] px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors"
           >
             Join Waitlist
-          </Link>
+          </button>
         </div>
+        {/* Modal */}
+        <JoinWaitlistModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
         {/* Bottom Section */}
         <div className="mt-16 pt-8 border-t border-gray-600">

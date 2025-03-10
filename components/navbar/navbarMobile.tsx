@@ -3,9 +3,11 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useRouter } from "next/navigation";
+import JoinWaitlistModal from "../Join waitlist/JoinWaitlistModal";
 
 export default function NavbarMobile() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<"patients" | "pharmacists">("patients");
   const router = useRouter();
 
@@ -57,14 +59,15 @@ export default function NavbarMobile() {
             <Link href="/about" className="text-gray-600 hover:text-black" onClick={() => setIsMobileMenuOpen(false)}>
               About Us
             </Link>
-            <Link
-              href="/waitlist"
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="border border-[#336E2E] text-[#44724A] px-6 py-2 rounded-full 
               hover:bg-[#44724A] hover:text-white transition-all text-center"
-              onClick={() => setIsMobileMenuOpen(false)}
             >
               Join Waitlist
-            </Link>
+            </button>
+            {/* Modal */} 
+            <JoinWaitlistModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
           </nav>
         </div>
       )}

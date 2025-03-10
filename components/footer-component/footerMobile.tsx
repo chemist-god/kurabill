@@ -5,8 +5,11 @@ import facebook from "@/public/assets/facebook.png";
 import twitter from "@/public/assets/twitter.png";
 import youtube from "@/public/assets/youtube.png";
 import instagram from "@/public/assets/instagram.png";
+import JoinWaitlistModal from "../Join waitlist/JoinWaitlistModal";
+import { useState } from "react";
 
 const FooterMobile: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <footer className="bg-[#1B4332] text-white px-6 py-10 rounded-t-3xl">
       <div className="max-w-md mx-auto text-center">
@@ -120,13 +123,16 @@ const FooterMobile: React.FC = () => {
 
         {/* Join Waitlist Button */}
         <div className="mt-[4rem]">
-          <Link
-            href="/waitlist"
+          <button
+          onClick={() => setIsModalOpen(true)}
             className="bg-white text-[#1B4332] px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors"
           >
             Join Waitlist
-          </Link>
+          </button>
         </div>
+
+        {/* Modal */}
+        <JoinWaitlistModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
         {/* Social Links */}
         <div className="flex justify-center gap-4 mt-[8rem]">

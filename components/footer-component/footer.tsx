@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import FooterMobile from '@/components/footer-component/footerMobile';
-import logo from '@/public/assets/kurabill-logo-I.png';
+import logo from '@/public/assets/kurabill-logo-I.svg';
 import facebook from '@/public/assets/facebook.png';
 import twitter from '@/public/assets/twitter.png';
 import youtube from '@/public/assets/youtube.png';

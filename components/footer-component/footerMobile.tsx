@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/assets/kurabill-logo-I.png";
+import logo from "@/public/assets/kurabill-logo-I.svg";
 import facebook from "@/public/assets/facebook.png";
 import twitter from "@/public/assets/twitter.png";
 import youtube from "@/public/assets/youtube.png";

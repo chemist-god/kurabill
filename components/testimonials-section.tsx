@@ -54,7 +54,7 @@ export function TestimonialsSection() {
         </div>
 
         <div>
-          <h3 className="text-lg md:text-4xl font-semibold mb-[2rem]">Hear From other Customers Who Use Kurabill</h3>
+          <h3 className="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-semibold mb-[2rem]">Hear From other Customers Who Use Kurabill</h3>
         </div>
 
         {/* Testimonial Display */}

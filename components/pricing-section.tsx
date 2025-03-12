@@ -63,7 +63,7 @@ const PricingSection: React.FC = () => {
                     <div className="inline-block px-4 py-1 rounded-full bg-gray-200 mb-4 border border-[#364C09]">
                         <span className="dm-sans-text text-sm font-medium">🏷️ Pricing</span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#1B1B1B] mb-[2.5rem]">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1B1B1B] mb-[2.5rem]">
                         Find the right plan
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/assets/kurabill-logo-I.svg";
-import facebook from "@/public/assets/facebook.png";
-import twitter from "@/public/assets/twitter.png";
-import youtube from "@/public/assets/youtube.png";
-import instagram from "@/public/assets/instagram.png";
+import facebook from "@/public/assets/facebook.svg";
+import twitter from "@/public/assets/twitter.svg";
+import youtube from "@/public/assets/youtube.svg";
+import instagram from "@/public/assets/instagram.svg";
 import JoinWaitlistModal from "../Join waitlist/JoinWaitlistModal";
 import { useState } from "react";
 

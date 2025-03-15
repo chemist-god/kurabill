@@ -31,10 +31,10 @@ export function FeaturesSection() {
 
           {/* Content */}
           <div className="w-full md:w-1/2">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-[24px] sm:text-4xl font-bold mb-6">
               Global Healthcare
             </h2>
-            <p className="text-gray-600 text-lg mb-8">
+            <p className="text-gray-600 text-[10px] sm:text-[20px] mb-8">
               Payment used to be a restriction, we solved that! Buy medications 
               for Yourself, family & Friends from anywhere in the world
             </p>
@@ -48,10 +48,10 @@ export function FeaturesSection() {
         <div className="flex flex-col-reverse md:flex-row items-center gap-16">
           {/* Content */}
           <div className="w-full md:w-1/2">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-[24px] sm:text-4xl font-bold mb-6">
               Digital Pharmacy
             </h2>
-            <p className="text-gray-600 text-lg mb-8">
+            <p className="text-gray-600 text-[10px] sm:text-[20px] mb-8">
               Your trusted partner in delivering medications globally, with 
               seamless digital solutions for easy access and secure payments
             </p>

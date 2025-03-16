@@ -1,4 +1,4 @@
-import AboutHero from '@/components/about-hero';
+import AboutHero from '@/components/About-Hero/about-hero';
 import WhyChooseKurabill from '@/components/why-choose-kurabill';
 
 export default function AboutPage() {

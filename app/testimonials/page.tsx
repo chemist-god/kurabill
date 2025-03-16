@@ -1,5 +1,5 @@
 import React from 'react'
-import { TestimonialsSection } from '@/components/testimonials-section'
+import { TestimonialsSection } from '@/components/Testimonials/testimonials-section'
 
 const page = () => {
   return (

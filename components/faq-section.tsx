@@ -41,7 +41,7 @@ export function FAQSection() {
   return (
     <section className="w-full py-24 bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-6">
-        <h2 className="text-4xl font-bold text-center mb-16">
+        <h2 className="text-3xl sm:text-3xl font-bold text-center mb-16">
           Frequently Asked Questions
         </h2>
 
@@ -55,7 +55,7 @@ export function FAQSection() {
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="text-lg font-medium">{faq.question}</span>
+                <span className="text-xs sm:text-base md:text-lg lg:text-lg xl:text-lg font-medium">{faq.question}</span>
                 <span className="flex-shrink-0 ml-4">
                   {faq.isOpen ? (
                     <MinusIcon className="w-6 h-6 text-gray-500" />
@@ -66,7 +66,7 @@ export function FAQSection() {
               </button>
               
               {faq.isOpen && (
-                <div className="px-6 py-4 text-gray-600">
+                <div className="px-2 py-2 text-xs text-gray-600 sm:px-6 sm:py-4 sm:text-base">
                   {faq.answer}
                 </div>
               )}

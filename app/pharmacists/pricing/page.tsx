@@ -1,4 +1,4 @@
-import PricingSection from '@/components/pricing-section';
+import PricingSection from '@/components/Pricing/pricing-section';
 import PharmacistNavbar from '@/components/pharmacist-navbar';
 
 export default function PricingPage() {

@@ -55,7 +55,7 @@ export function FAQSection() {
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="text-xs sm:text-base md:text-lg lg:text-lg xl:text-lg font-medium">{faq.question}</span>
+                <span className="text-[16px] sm:text-base md:text-lg lg:text-lg xl:text-lg font-medium">{faq.question}</span>
                 <span className="flex-shrink-0 ml-4">
                   {faq.isOpen ? (
                     <MinusIcon className="w-6 h-6 text-gray-500" />
@@ -66,7 +66,7 @@ export function FAQSection() {
               </button>
               
               {faq.isOpen && (
-                <div className="px-2 py-2 text-xs text-gray-600 sm:px-6 sm:py-4 sm:text-base">
+                <div className="px-4 py-2 text-gray-600 text-sm md:text-base leading-relaxed">
                   {faq.answer}
                 </div>
               )}

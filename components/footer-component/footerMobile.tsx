@@ -59,17 +59,17 @@ const FooterMobile: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/testimonials" className="hover:underline">
+                <Link href="/pharmacists/testimonials" className="hover:underline">
                   Testimonials
                 </Link>
               </li>
               <li>
-                <Link href="/faqs" className="hover:underline">
+                <Link href="/pharmacists/faqs" className="hover:underline">
                   FAQs
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:underline">
+                <Link href="/pharmacists/about" className="hover:underline">
                   About Us
                 </Link>
               </li>
